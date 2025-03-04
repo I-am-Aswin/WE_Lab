@@ -23,7 +23,11 @@ document.getElementById("dataform").addEventListener( 'submit', (e) => {
     function isValidEmail(email) {
         if (!email.includes("@")) return false;
         const parts = email.split("@");
-        return parts[0].length > 0 && parts[1].length > 0;
+
+        if( ! parts[1].includes(".") ) return false;
+        const subparts = parts[1].split(".")
+
+        return parts[0].length > 0 && subparts[0].length > 1 && subparts[1].length > 1 ;
     }
 
     function isValidMobileNumber(number) {
@@ -85,6 +89,8 @@ document.getElementById("dataform").addEventListener( 'submit', (e) => {
     }
 
     alert("Form submitted successfully!");
+
+    document.getElementById("dataform").reset();
     return true;
 });
 

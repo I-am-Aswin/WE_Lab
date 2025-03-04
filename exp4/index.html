@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" >
+    <title>Calcuator</title>
+</head>
+<body>
+    
+    <div class="root">
+        <div class="calc">
+            <div class="screen">
+                <p class="display" id="display"></p>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-erease" id="btn-erase">Del</button>
+                <button class="btn-d" value="/" onclick="handleclick(event)">/</button>
+                <button class="btn-m" value="*" onclick="handleclick(event)">*</button>
+                <button class="btn-s" value="-" onclick="handleclick(event)">-</button>
+                
+                <button class="btn9" value="9" onclick="handleclick(event)">9</button>
+                <button class="btn8" value="8" onclick="handleclick(event)">8</button>
+                <button class="btn7" value="7" onclick="handleclick(event)">7</button>
+                <button class="btn-p" value="+" onclick="handleclick(event)">+</button>
+
+                <button class="btn6" value="6" onclick="handleclick(event)">6</button>
+                <button class="btn5" value="5" onclick="handleclick(event)">5</button>
+                <button class="btn4" value="4" onclick="handleclick(event)">4</button>
+
+                <button class="btn3" value="3" onclick="handleclick(event)">3</button>
+                <button class="btn2" value="2" onclick="handleclick(event)">2</button>
+                <button class="btn1" value="1" onclick="handleclick(event)">1</button>
+                <button class="btn-enter" id="btn-enter">=</button>
+                
+                <button class="btn0" value="0" onclick="handleclick(event)">0</button>
+                <button class="btn-point" value="." onclick="handleclick(event)">.</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

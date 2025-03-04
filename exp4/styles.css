@@ -1,0 +1,86 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 97vh;
+}
+
+.calc {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 23%;
+    height: 80%;
+
+    border: 1px solid black;    
+    border-radius: 1.5rem;
+    padding: 1rem;
+
+    background-color: rgb(161, 161, 161);
+}
+
+.screen {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0 0.7rem 0 0.7rem;
+
+
+    width: 95%;
+    height: 40%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.4rem
+}
+
+.btn-p {
+    grid-row: 2 / span 2;
+    grid-column: 4;
+}
+
+.btn-enter {
+    grid-row: 4 / span 2;
+    grid-column: 4;
+}
+
+.btn0 {
+    grid-column: 1 / span 2;   
+}
+
+
+.buttons * {
+
+    border: 1px solid black;
+    outline: none;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    background-color: white;
+}
+
+.buttons *:hover {
+    background-color: rgb(168, 227, 255);
+}
+
+.buttons *:active {
+    background-color: rgb(108, 190, 228);
+}
