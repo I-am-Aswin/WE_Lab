@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    
+    <div class="flex justify-center items-center w-full h-[100vh] bg-radial from-white to-slate-600">
+
+        <form class="flex flex-col border border-gray-300 rounded-lg shadow-lg px-16 py-6 justify-center items-center gap-3 w-2/5 bg-white" id="dataform">
+            <h2 class="text-2xl font-bold">Register Yourself</h2>
+
+            <div class="flex flex-col justify-between w-full">
+                <label for="username" class="text-sm mb-1" >User Name : </label>
+                <input id="uname" name="username" type="text" placeholder="User Name" class="border border-gray-400 px-4 py-2 text-sm rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+            </div>
+
+            <div class="flex flex-col justify-between w-full">
+                <label for="mailid" class="text-sm mb-1" >Email Id : </label>
+                <input id="mail" name="mailid" type="mail" placeholder="Email Address" class="border border-gray-400 px-4 py-2 text-sm rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+            </div>
+
+            <div class="flex flex-col justify-between w-full">
+                <label for="mobile" class="text-sm mb-1" >Mobile Number : </label>
+                <input id="mobile" name="mobile" type="text" placeholder="+91 12345 67890" class="border border-gray-400 px-4 py-2 text-sm rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+            </div>
+
+            <div class="flex flex-col justify-between w-full">
+                <label for="dob" class="text-sm mb-1" >Date of Birth : </label>
+                <input id="dob" name="dob" type="date" placeholder="DD/MM/YYYY" class="border border-gray-400 px-4 py-2 text-sm rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+            </div>
+
+            <div class="flex flex-col justify-between w-full">
+                <label for="age" class="text-sm mb-1" >Age : </label>
+                <input id="age" name="age" type="number" min="0" placeholder="Age" class="border border-gray-400 px-4 py-2 text-sm rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+            </div>
+
+            <div class="flex flex-row justify-between w-full items-center mt-2">
+                <div>
+                    <input id="male" name="gender" value="male" type="radio" placeholder="First Name" class="border border-gray-400 px-4 py-2 text-sm rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+                    <label for="Male" class="">Male</label>
+                </div>
+
+                <div>
+                    <input id="female" name="gender" value="female" type="radio" placeholder="First Name" class="border border-gray-400 px-4 py-2 rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+                    <label for="Male" class="">Female</label>
+                </div>
+
+                <div>
+                    <input id="other" name="gender" value="other" type="radio" placeholder="First Name" class="border border-gray-400 px-4 py-2 rounded-lg focus:outline-none hover:shadow-md hover:shadow-blue-100 transition-all duration-150 shadow-sm">
+                    <label for="Male" class="">Other</label>
+                </div>
+            </div>
+
+            <input type="submit" value="Register" class="w-full py-2 mt-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all shadow-md">
+        </form>
+
+    </div>
+
+
+</body>
+<script type="text/javascript" src="./script.js"></script>
+
+</html>

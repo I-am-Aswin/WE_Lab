@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>ImageHub</title>
+</head>
+
+<body>
+    <nav class="navbar floating-navbar navbar-dark px-4">
+        <div class="container-fluid px-4 py-2">
+            <a class="navbar-brand fw-bold" href="#">ImageHub</a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="image-section">
+            <img src="./images/image.jpeg" alt="Main Image" usemap="#hero-image">
+            <div class="text-content">Welcome to the Image Hub</div>
+
+            <map name="hero-image">
+                <area shape="rect" coords="200,125 , 300, 150" href="https://www.sony.co.in/" alt="Cameras">
+                <area shape="circle" coords="250,250,85" href="https://www.amazon.in/Camera-Lenses/b?ie=UTF8&node=1389199031" alt="Lenses" style="border: 2px solid black;">
+                <!-- <area shape="poly" coords="400,300,500,400,450,500" href="page3.html" alt="Section 3"> -->
+            </map>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="./images/image1.jpeg" alt="Card 1">
+                <p>Clock</p>
+            </div>
+            <div class="card">
+                <img src="./images/image2.jpeg" alt="Card 2">
+                <p>Astronaut</p>
+            </div>
+            <div class="card">
+                <img src="./images/image3.jpeg" alt="Card 3">
+                <p>Lantern</p>
+            </div>
+            <div class="card">
+                <img src="./images/image4.jpeg" alt="Card 4">
+                <p>Clock</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
