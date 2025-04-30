@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>we.itlab.exp9.routes.StudentRoute</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>we.itlab.exp9.IndexServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/student</url-pattern>
+  </servlet-mapping>
 </web-app>
