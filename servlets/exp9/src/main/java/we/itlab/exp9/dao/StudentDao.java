@@ -12,16 +12,23 @@ import we.itlab.exp9.modals.Student;
 
 public class StudentDao {
 
-    private Connection connection;
+    private String URL;
+    private String USER;
+    private String PASSWORD;
 
-    public StudentDao( String URL, String username, String password ) throws SQLException {
+    public StudentDao( String URL, String username, String password ) {
+
+        this.URL = URL;
+        this.USER = username;
+        this.PASSWORD = password;
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            this.connection = DriverManager.getConnection( URL, username, password );
-        } catch ( SQLException | ClassNotFoundException ex ) {
-            System.out.println("Database Connection Failed : " + ex);
-            throw new SQLException(ex.getMessage(), ex);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error Loading Driver");
+            System.out.println(e);
         }
+
     }
 
     public List<Student> search(String query) {
@@ -29,7 +36,9 @@ public class StudentDao {
         List<Student> studs = new ArrayList<>();
         String selectQuery = "SELECT * FROM students WHERE rollno LIKE ? OR name LIKE ? OR dept LIKE ?;";
 
-        try( PreparedStatement stmt = connection.prepareStatement(selectQuery) ) {
+        try( Connection connection = DriverManager.getConnection(URL, USER, PASSWORD) ) {
+
+            PreparedStatement stmt = connection.prepareStatement(selectQuery);
 
             stmt.setString(1, "%" + query + "%");
             stmt.setString(2, "%" + query + "%");
@@ -44,6 +53,7 @@ public class StudentDao {
                     ));
                 }
             }
+
         } catch ( SQLException ex ) {
             System.out.println(ex);
         }
@@ -56,7 +66,9 @@ public class StudentDao {
 
         String insertQuery = "INSERT INTO students ( rollno, name, dept ) VALUES (?, ?, ?)";
 
-        try( PreparedStatement stmt = connection.prepareStatement(insertQuery)) {
+        try( Connection connection = DriverManager.getConnection(URL, USER, PASSWORD) ) {
+
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
 
             stmt.setString(1, stud.getRollno());
             stmt.setString(2, stud.getName());
@@ -71,7 +83,4 @@ public class StudentDao {
             return false;
         }
     }
-
-    
-
 }
