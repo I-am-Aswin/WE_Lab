@@ -32,12 +32,12 @@ $stmt->execute([$_SESSION['user_id'], $score]);
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="flex items-center justify-center min-h-screen">
 
-    <div class="bg-white p-6 rounded shadow-md text-center">
+    <div class="px-8 py-10 w-1/3 border border-gray-300 rounded shadow-md text-center">
         <h1 class="text-3xl font-bold mb-4">Your Score</h1>
         <p class="text-2xl"><?= $score ?>/<?= count($answers) ?></p>
-        <a href="dashboard.php" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Back to Dashboard</a>
+        <a href="../index.php" class="mt-4 inline-block bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Back to Dashboard</a>
     </div>
 
 </body>
